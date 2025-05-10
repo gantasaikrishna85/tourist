@@ -1,0 +1,258 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wanderlust | Explore the World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Updated Nav Styling */
+    nav {
+      position: fixed;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 12px 30px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      z-index: 1000;
+      width: calc(100% - 80px);
+      max-width: 1200px;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #007BFF;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #007BFF;
+    }
+
+    header {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.2)), 
+                  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .cta {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 15px;
+      margin: 40px auto;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      padding: 12px 30px;
+      background: white;
+      color: #007BFF;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta button:hover {
+      background: #0056b3;
+      color: white;
+    }
+
+    footer {
+      background: #343a40;
+      color: #ddd;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      nav {
+        width: calc(100% - 40px);
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Wanderlust</div>
+    <ul>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Discover Your Next Adventure</h1>
+    <p>Explore the most beautiful places on Earth with our exclusive travel experiences curated just for you.</p>
+  </header>
+
+  <section id="destinations">
+    <h2 style="text-align:center; margin-bottom:40px;">Top Destinations</h2>
+    <div class="destinations">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542977274-7dde5b2ebf68?auto=format&fit=crop&w=1470&q=80" alt="Bali"/>
+        <div class="card-content">
+          <h3>Bali, Indonesia</h3>
+          <p>Pristine beaches, vibrant culture, and lush greenery await you in this tropical paradise.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?auto=format&fit=crop&w=1470&q=80" alt="Swiss Alps"/>
+        <div class="card-content">
+          <h3>Swiss Alps</h3>
+          <p>Snow-covered peaks and picturesque villages make this a dream destination for every traveler.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1559114195-0a4df1c6a1b2?auto=format&fit=crop&w=1470&q=80" alt="Dubai"/>
+        <div class="card-content">
+          <h3>Dubai, UAE</h3>
+          <p>Experience the luxury, innovation, and stunning skyline of one of the most modern cities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="packages">
+    <h2>Ready to Start Your Journey?</h2>
+    <p>Choose from our hand-picked travel packages and let us take care of the rest.</p>
+    <button onclick="scrollToContact()">Contact Us</button>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center; margin-bottom:30px;">Get in Touch</h2>
+    <form style="max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px;">
+      <input type="text" placeholder="Your Name" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+      <input type="email" placeholder="Your Email" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+      <textarea placeholder="Your Message" rows="5" required style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+      <button type="submit" style="padding:12px; background:#007BFF; color:white; border:none; border-radius:8px;">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Wanderlust Travels. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+
